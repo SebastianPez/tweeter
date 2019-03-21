@@ -32,7 +32,7 @@ const createTweetElement = function (tweetData) {
 const renderTweets = function (tweets) {
 for (let i = 0; i < tweets.length; i ++) {
   let newTweet = createTweetElement(tweets[i]);
-  $('section.tweet-container').append(newTweet);
+  $('section.tweet-container').prepend(newTweet);
 }
 }
 
@@ -56,11 +56,22 @@ $(document).ready(function() {
       e.preventDefault();
       console.log('Prevented default submission');
 
+      if (this.firstElementChild.value === "") {
+        alert('Without input, I cannot post');
+        return;
+      }
+
+      if (this.firstElementChild.value.length > 140) {
+        alert('Over character limit of 140');
+        return;
+      }
+      
       $.ajax({
         method: 'POST',
         url: '/tweets/',
         data: { text: this.firstElementChild.value }
       })
+      .done(loadTweets());
     })
   })
 
