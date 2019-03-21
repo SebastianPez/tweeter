@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+main.container section.new-tweet {
+    background-color: #eee;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 0px 5px 5px 5px;
+}
+
+main.container section.new-tweet h2 {
+    border-bottom: 1px solid;
+    padding: 4px 0px 0px 4px;
+    margin: 19.920px 0px 14px 0px;
+}
+
+main.container form {
+    padding: 0px 5px 2px 5px;
+}
+
+main.container textarea {
+    padding: 4px 5px 4px 5px;
+    width: 390px;
+}
+
+main.container span.counter {
+    font-style: italic;
+    float: right;
+}
+
+.over-length {
+    color: #ff0000;
+}

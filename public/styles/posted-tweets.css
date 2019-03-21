@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+article.posted-tweets {
+    background-color: #eee;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 5px 5px 5px 5px;
+    margin: 25px 0px 0px 0px;
+}
+
+header .user-img {
+    float: left;
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 3px 10px 0px 3px;
+}
+
+h2.user {
+    margin: 5px 0px 19.920px 0px;
+    float: left;
+}
+
+h4.handle {
+    margin: 5px 0px 21.280px 145px;
+    font-weight: lighter;
+}
+
+header.tweet-header {
+    height: 70px;
+    display: flex;
+}
+
+p.tweet-body {
+    background-color: white;
+    border-bottom: 1px;
+    border-bottom-color: #D3D3D3;
+    border-bottom-style: solid;
+    height: 80px;
+    padding: 30px 0px 0px 0px;
+    margin: 16px 0px 0px 0px;
+}
+
+footer.tweet-footer {
+    background-color: white;
+    height: 35px;
+    padding: 5px 0px 0px 3px;
+    display: flex;
+}
+
+.tweet-icon {
+    margin: 0px 1.5px 0px 1.5px;
+    width: 10px;
+    height: 10px;
+}
+
+article.posted-tweets span {
+    margin: 0px 0px 0px 245px;
+}
+
+.hover-background {
+    border-color: #A9A9A9 !important;
+}
+
+.hover-changed {
+    color: #A9A9A9;
+}
+
+.disappear {
+    visibility: hidden;
+}
+
+
+/* 1.border fades
+3.name fades
+4.username fades
+2.icons disappear */

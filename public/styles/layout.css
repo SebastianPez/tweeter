@@ -14,10 +14,18 @@ html {
  * Global layout stuff
  */
 
+main {
+  padding: 140px 20px 20px 20px;
+  width: 450px;
+  margin: 0 auto;
+  background-color: white;
+}
+
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /*

@@ -7,27 +7,70 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- Roboto Condensed font (Bold/Italic 700/300) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" />
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- NavBar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- NewTweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Posted-Tweet CSS -->
+    <link rel="stylesheet" href="/styles/posted-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Char Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets/">
+              <textarea name="text" id="tweet-textbox" placeholder="What are you humming about?"></textarea>
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+          </section>
+            <section class="tweet-container">
+              <article class="posted-tweets">
+                <header class="tweet-header">
+                  <img class="user-img" src="/images/smiling-corgi.png" alt="corgi">
+                  <h2 class="user">Bill Fields</h2>
+                  <h4 class="handle">@MrFields</h4> 
+                </header>
+                <p class="tweet-body">
+                  Little tweet here.
+                </p>
+                <footer class="tweet-footer">
+                  10 days ago
+                  <span>
+                    <img class="tweet-icon" src="/images/flag.png">
+                    <img class="tweet-icon" src="/images/retweet.png">
+                    <img class="tweet-icon" src="/images/heart.png">
+                  </span>
+                </footer>
+              </article>
+            </section>
     </main>
 
   </body>
-</html>
+</html> 
