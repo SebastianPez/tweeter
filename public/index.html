@@ -44,26 +44,13 @@
     <main class="container">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form method="POST" action="/tweets/">
+            <form id="new-tweet-post" method="POST" action="/tweets/">
               <textarea name="text" id="tweet-textbox" placeholder="What are you humming about?"></textarea>
               <input type="submit" value="Tweet">
               <span class="counter">140</span>
             </form>
           </section>
             <section class="tweet-container">
-              <article class="posted-tweets">
-                <header class="tweet-header">
-                </header>
-                <p class="tweet-body">
-                </p>
-                <footer class="tweet-footer">
-                  <span>
-                    <img class="tweet-icon" src="/images/flag.png">
-                    <img class="tweet-icon" src="/images/retweet.png">
-                    <img class="tweet-icon" src="/images/heart.png">
-                  </span>
-                </footer>
-              </article>
             </section>
     </main>
 

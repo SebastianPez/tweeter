@@ -5,6 +5,22 @@
  */
 $(document).ready(function() {
 
+  $(function() {
+    let $submission = $('#new-tweet-post');
+    $submission.submit(function(e) {
+      e.preventDefault();
+      // console.log(e);
+      // console.log(this);
+      console.log('Prevented default submission');
+
+      $.ajax({
+        method: 'POST',
+        url: '/tweets/',
+        data: { text: this.firstElementChild.value }
+      })
+    })
+  })
+
 const tweets = [
     {
       "user": {
