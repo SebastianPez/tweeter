@@ -38,11 +38,13 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button id="compose-button" type="button"><img id="compose-img" src="./images//editIcon.png">Compose</button>
     </nav>
     
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
+          <div class="tweet-error">Error Message</div>
             <h2>Compose Tweet</h2>
             <form id="new-tweet-post" method="POST" action="/tweets/">
               <textarea name="text" id="tweet-textbox" placeholder="What are you humming about?"></textarea>

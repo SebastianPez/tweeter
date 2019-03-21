@@ -75,6 +75,17 @@ $(document).ready(function() {
     })
   })
 
+  $('#compose-button').hover(function () {
+    $('#compose-button').toggleClass('button-hover');
+  })
+
+  $('#compose-button').click(function () {
+    // if ($('section.new-tweet')[0].style.display === "block") {
+    $('section.new-tweet').slideToggle(400, function () {
+      console.log('Tweeting activated!');
+    });
+    $('#tweet-textbox').focus();
+  })
 
   $('main.container article.posted-tweets').hover(function () {
       $('.tweet-header').toggleClass('hover-changed');
