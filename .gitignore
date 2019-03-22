@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 ajaxLearning
 public/scripts/test.js
+mongo-example.js
