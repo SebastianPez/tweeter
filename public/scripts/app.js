@@ -78,6 +78,7 @@ $(document).ready(function() {
         data: { text: this.firstElementChild.value }
       })
       .done(loadTweets());
+      $(this.firstElementChild).val("");
     })
   })
 
