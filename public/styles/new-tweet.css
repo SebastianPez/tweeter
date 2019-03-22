@@ -35,3 +35,12 @@ main.container span.counter {
 .over-length {
     color: #ff0000;
 }
+
+div.tweet-error {
+    background-color: orangered;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: bold;
+    display: none;
+}

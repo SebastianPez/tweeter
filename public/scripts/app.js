@@ -57,15 +57,21 @@ $(document).ready(function() {
       console.log('Prevented default submission');
 
       if (this.firstElementChild.value === "") {
-        alert('Without input, I cannot post');
+        $('div.tweet-error').text('Without input, I cannot post');
+        $('div.tweet-error').slideDown('fast', function () {
+        });
         return;
       }
 
       if (this.firstElementChild.value.length > 140) {
-        alert('Over character limit of 140');
+        $('div.tweet-error').text('Over character limit of 140');
+        $('div.tweet-error').slideDown('fast', function () {
+        });
         return;
       }
-      
+      $('div.tweet-error').slideUp('fast', function () {
+      });
+
       $.ajax({
         method: 'POST',
         url: '/tweets/',
