@@ -30,12 +30,11 @@ const createTweetElement = function (tweetData) {
 
 
 const renderTweets = function (tweets) {
-for (let i = 0; i < tweets.length; i ++) {
-  let newTweet = createTweetElement(tweets[i]);
-  $('section.tweet-container').prepend(newTweet);
+  for (let i = 0; i < tweets.length; i ++) {
+    let newTweet = createTweetElement(tweets[i]);
+    $('section.tweet-container').prepend(newTweet);
+  }
 }
-}
-
 const loadTweets = function () {
   $.ajax({
     method: 'GET',
@@ -45,6 +44,18 @@ const loadTweets = function () {
     renderTweets(data);
   })
 }
+
+
+//// Trying to only update with page with new tweet, not reloading all tweets.
+// const updateTweets = function () {
+//   $.ajax({
+//     method: 'GET',
+//     url: '/tweets'
+//   })
+//   .done(function (data) {
+//     renderTweets(data[0])
+//   })
+// }
 
 $(document).ready(function() {
   
@@ -78,7 +89,7 @@ $(document).ready(function() {
         data: { text: this.firstElementChild.value }
       })
       .done(loadTweets());
-      $(this.firstElementChild).val("");
+      $('#tweet-textbox').val("");
     })
   })
 
@@ -93,11 +104,11 @@ $(document).ready(function() {
     });
     $('#tweet-textbox').focus();
   })
-
-  $('main.container article.posted-tweets').hover(function () {
-      $('.tweet-header').toggleClass('hover-changed');
-      $('article.posted-tweets').toggleClass('hover-background');
-      $('.tweet-icon').toggleClass('disappear');
-  })
+  // Tweet toggling attempt before using just CSS
+  // $('section.tweet-container').hover(function () {
+  //     $('.tweet-header').toggleClass('hover-changed');
+  //     $('article.posted-tweets').toggleClass('hover-background');
+  //     $('.tweet-icon').toggleClass('disappear');
+  // })
 
 });

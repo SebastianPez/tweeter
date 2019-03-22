@@ -11,6 +11,7 @@ article.posted-tweets {
     border: 1px solid grey;
     padding: 5px 5px 5px 5px;
     margin: 25px 0px 0px 0px;
+    opacity: 0.5;
 }
 
 header .user-img {
@@ -57,22 +58,21 @@ footer.tweet-footer {
     margin: 0px 1.5px 0px 1.5px;
     width: 10px;
     height: 10px;
+    visibility: hidden;
 }
 
 article.posted-tweets span {
     margin: 0px 0px 0px 245px;
+    border-color: #A9A9A9;
+}
+article.posted-tweets:hover {
+    opacity: 1;
+    color: black;
+    visibility: visible;
 }
 
-.hover-background {
-    border-color: #A9A9A9 !important;
-}
-
-.hover-changed {
-    color: #A9A9A9;
-}
-
-.disappear {
-    visibility: hidden;
+article.posted-tweets:hover .tweet-icon {
+    visibility: visible;
 }
 
 
