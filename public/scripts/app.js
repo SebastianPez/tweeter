@@ -80,7 +80,7 @@ $(document).ready(function() {
       .done(function (res) {
         renderTweets([res])
       });
-      
+
       $('#tweet-textbox').val("");
     })
   })

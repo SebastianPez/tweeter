@@ -10,6 +10,7 @@ main.container section.new-tweet {
     border-radius: 10px;
     border: 1px solid grey;
     padding: 0px 5px 5px 5px;
+    display: none;
 }
 
 main.container section.new-tweet h2 {
