@@ -52,6 +52,7 @@ footer.tweet-footer {
     height: 35px;
     padding: 5px 0px 0px 3px;
     display: flex;
+    font-size: .65rem;
 }
 
 .tweet-icon {
