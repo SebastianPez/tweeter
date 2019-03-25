@@ -14,8 +14,8 @@ This repository is the result of my Tweeter project. The SPA Twitter clone was b
 
 ## Screenshots
 
-!["Screenshot of empty composition box with initial counter"] (https://github.com/SebastianPez/tweeter/blob/master/docs/tweetBox-noText.png?raw=true)
-!["Screenshot of tweet composition box with updated counter"] (https://github.com/SebastianPez/tweeter/blob/master/docs/tweetbox-withText.png?raw=true)
+!["Screenshot of empty composition box with initial counter"] (https://github.com/SebastianPez/tweeter/blob/master/docs/tweetBox-noText.png?raw=true);
+!["Screenshot of tweet composition box with updated counter"] (https://github.com/SebastianPez/tweeter/blob/master/docs/tweetbox-withText.png?raw=true);
 
 ## Dependencies
 
