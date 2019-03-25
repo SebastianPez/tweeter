@@ -1,7 +1,7 @@
 
+// Counts the character's within the user's text input box. If the user inputs too many chars, it will change the color to red to inform the user they're over limit.
 
 $(document).ready(function() {
-    // let countedChars = document.querySelector('main.container textarea');
 
     $("#tweet-textbox").on("keyup", function() {
         let $counter = $(this).parent().find(`.counter`);

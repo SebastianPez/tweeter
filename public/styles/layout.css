@@ -3,6 +3,9 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+/* All the styling for the main page layout.  */
+
 html {
   box-sizing: border-box;
 }

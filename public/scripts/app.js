@@ -1,11 +1,8 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
+// Takes in an array of tweets, implements them into the proper DOM node with appopriate tags for each element. Needs to be called by renderTweets to append the new tweet to the main page.
 
 const createTweetElement = function (tweetData) {
+  // Creates the date/time of each tweet when they're posted.
   let convertDate = new Date(tweetData.created_at);
     let dateString = convertDate.toDateString();
     let timeString = convertDate.toLocaleTimeString();
@@ -40,13 +37,16 @@ const createTweetElement = function (tweetData) {
   return $tweet;
 }
 
-
+// Takes the properly formatted and styled tweet and appends it to the main page.
 const renderTweets = function (tweets) {
   for (let i = 0; i < tweets.length; i ++) {
     let newTweet = createTweetElement(tweets[i]);
     $('section.tweet-container').prepend(newTweet);
   }
 }
+
+// Retrieves tweets from remote database and uses the renderTweets function to load them into the page.
+
 const loadTweets = function () {
   $.ajax({
     method: 'GET',
@@ -67,6 +67,8 @@ $(document).ready(function() {
       e.preventDefault();
       console.log('Prevented default submission');
 
+      // Before a tweet is posted it checks to make sure there is user input and that it is also within the character limit (<140 chars). 
+      
       if (this.firstElementChild.value === "") {
         $('div.tweet-error').text('Without input, I cannot post');
         $('div.tweet-error').slideDown('fast', function () {
