@@ -70,7 +70,7 @@ $(document).ready(function() {
       // Before a tweet is posted it checks to make sure there is user input and that it is also within the character limit (<140 chars). 
       
       if (this.firstElementChild.value === "") {
-        $('div.tweet-error').text('Without input, I cannot post');
+        $('div.tweet-error').text('A tweet must have text in order to be posted');
         $('div.tweet-error').slideDown('fast', function () {
         });
         return;
