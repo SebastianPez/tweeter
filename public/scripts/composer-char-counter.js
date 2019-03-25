@@ -1,5 +1,6 @@
 
-// Counts the character's within the user's text input box. If the user inputs too many chars, it will change the color to red to inform the user they're over limit.
+// Counts the character's within the user's text input box. If the user inputs too many chars, it will change the color 
+// to red to inform the user they're over limit.
 
 $(document).ready(function() {
 

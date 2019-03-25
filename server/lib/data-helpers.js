@@ -13,7 +13,7 @@ module.exports = function makeDataHelpers(db) {
         callback(null, true);
     },
 
-    // Get all tweets in `db`, sorted by newest first
+    // Get all tweets in mongoDB, sorted by newest first
     getTweets: function(callback) {
       simulateDelay(() => {
         db.collection("tweets").find().toArray((err, tweets) => {
