@@ -3,16 +3,14 @@
 
 const createTweetElement = function (tweetData) {
   // Creates the date/time of each tweet when they're posted.
-  // Had to look at Ronan Fegan's code to figure this out, haven't changed his code yet.
   let convertDate = new Date(tweetData.created_at);
-  let dateString = convertDate.toDateString();
-  let timeString = convertDate.toLocaleTimeString();
-  let finalDate = `${dateString} ${timeString}`;
+  let dateString = convertDate.toISOString();
+ 
   
   let $tweet = $('<article>').addClass('posted-tweets');
   let $header = $('<header>').addClass('tweet-header');
   let $p = $('<p>').addClass('tweet-body').text(tweetData.content.text);
-  let $footer = $('<footer>').addClass('tweet-footer').text(finalDate);
+  let $footer = $('<footer>').addClass('tweet-footer').text(moment(dateString).fromNow());
   let $span = $('<span>');
 
   $header.append($('<img>').addClass('user-img').attr('src', tweetData.user.avatars.small));

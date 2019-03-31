@@ -46,8 +46,10 @@ p.tweet-body {
     border-bottom-style: solid;
     height: 80px;
     padding: 30px 0px 0px 0px;
-    margin: 16px 0px 0px 0px;
+    overflow-wrap: break-word;
+    margin: auto;
 }
+
 
 footer.tweet-footer {
     background-color: white;
